@@ -91,8 +91,6 @@ class App extends Component {
               <Route path="/withdrawOtp" element={<WithdrawOtp />} />
               {/* <Route path="/emipayotp" element={<EmiPayOtp />} />/ */}
               <Route path="/kycstatus" element={<Kyc_satus />}></Route>
-asdd
-dddd
 
               <Route path="/Admindashbord" element={<Admindashbord></Admindashbord>}></Route>
 
