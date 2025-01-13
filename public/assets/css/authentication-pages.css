@@ -1,0 +1,153 @@
+.authentication-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+.login-form {
+  position: relative;
+}
+
+.login-form::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-image: url(../images/login/background-image.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.login-form::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-color: rgba(var(--black-color), 0.05);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  /* opacity: 0.9; */
+}
+
+/* .authentication-page {
+    background-image: url(../images/1.png), linear-gradient(to bottom right, #13B1E8, #1350AB, #06175F);
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+} */
+.authentication-page .container.bg-white {
+  box-shadow: var(--default-shadow);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.login-form .form-control {
+  caret-color: rgb(var(--primary-color));
+}
+
+.login-form .social-icons i {
+  padding: 6px;
+  border: 1px solid rgb(var(--default-border-color));
+  border-radius: 50%;
+  margin-inline-start: 8px;
+}
+
+.login-form .login-logo {
+  height: 2rem;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .login-image {
+    background-image: url(../images/login/2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 430px;
+    width: 100%;
+  }
+}
+
+.err_msg {
+  margin-top: 5px;
+  color: #FF5722;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .login-form .container,
+  .login-form .container-lg,
+  .login-form .container-md,
+  .login-form.container-sm,
+  .login-form.container-xl,
+  .login-form.container-xxl {
+    max-width: 1000px;
+  }
+}
+
+.view-password-icon {
+  position: absolute;
+  top: 2.1rem;
+  right: 0.75rem;
+  opacity: 0.75;
+  z-index: 2;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+.forgot-password a:is(:active, :hover, .active) {
+  color: rgb(var(--primary-color));
+}
+
+/* otp styles */
+@media only screen and (min-width: 768px) {
+  .verify-image {
+    background-image: url(../images/login/1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* register styles */
+@media only screen and (min-width: 768px) {
+  .register-image {
+    background-image: url(../images/login/4.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* forgotpassword styles */
+@media only screen and (min-width: 768px) {
+  .forgotpassword-image {
+    background-image: url(../images/login/3.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    /* padding-block: 1rem; */
+  }
+}

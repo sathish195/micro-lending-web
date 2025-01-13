@@ -1,0 +1,20 @@
+/* styles.module.css */
+.rangeLabels {
+    text-align: center;
+}
+
+.rangeLabel {
+    margin-right: 20px;
+}
+
+.chartContainer {
+    margin-top: 20px;
+    position: relative;
+}
+
+.chartLabel {
+    position: absolute;
+    color: #0b0a0a;
+    font-size: 12px;
+    font-weight: bold;
+}

@@ -1,0 +1,51 @@
+.card {
+    border-radius: 0.25rem;
+    border: 0;
+    background-color: rgb(var(--white-color));
+    box-shadow: var(--default-shadow);
+    position: relative;
+    margin-block-end: 1.5rem;
+    width: 100%;
+}
+
+.card-header {
+    padding: 1rem 1.25rem;
+    background-color: transparent !important;
+    border-block-end: 1px solid rgb(var(--default-border-color));
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.card-header .card-title {
+    position: relative;
+    margin-block-end: 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.card-item {
+    /* background-color: rgb(var(--background-bg)); */
+    transition: all 0.3s linear;
+}
+
+.card-item:hover {
+    border: 1px solid rgb(var(--primary-color)) !important;
+    box-shadow: 0.1429rem 0.1429rem 0.5714rem rgba(var(--black-color), 0.06);
+    /* transform: scale(1); */
+}
+
+.micro-balance {
+    background-color: rgb(var(--bg-color1));
+    color: rgb(var(--white-color));
+}
+
+.micro-balance .availabel-balance {
+    padding: 0.625rem;
+    background-color: rgb(var(--white-color), 0.1);
+    border: 1px solid rgb(var(--white-color), 0.2);
+    border-radius: 0.25rem;
+}

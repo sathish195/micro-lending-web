@@ -1,0 +1,194 @@
+.sidebar-menu {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: 103;
+    background-color: rgb(var(--sidemenu-bg));
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    width: 15rem;
+    min-height: 100vh;
+    padding: 1.25rem 0;
+    overflow: hidden;
+    box-shadow: 0.875rem 1.063rem 2.5rem 0.25rem rgba(112, 144, 176, 0.08);
+    transition: inset-inline-start 240ms ease, width 240ms ease;
+}
+
+.sidebar-menu .main-logo {
+    height: 2.2rem;
+    max-width: 100%;
+}
+
+.sidebar-menu .navbar-brand-wrapper {
+    transition: width 0.25s ease, background 0.25s ease;
+    -webkit-transition: width 0.25s ease, background 0.25s ease;
+    -moz-transition: width 0.25s ease, background 0.25s ease;
+    -ms-transition: width 0.25s ease, background 0.25s ease;
+    height: 3.75rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .sidebar-menu {
+        left: -15rem;
+        transition: all 0.3s linear;
+    }
+
+    .menu-close .sidebar-menu {
+        left: unset !important;
+
+    }
+
+    .menu-close .sidebar-close {
+        background: rgba(var(--black-color), 0.3);
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
+
+.menu-close .sidebar-menu {
+    left: -15rem;
+}
+
+.sidenav-toggle-logo {
+    display: none;
+    height: 2rem;
+}
+
+@media only screen and (min-width:992px) {
+    .menu-close .sidenav-toggle-logo {
+        display: block;
+    }
+
+    .menu-close .main-logo {
+        display: none;
+    }
+
+    .menu-close .sidebar-menu {
+        left: 0;
+        width: 5rem;
+        overflow: visible;
+    }
+
+    .menu-close .sidebar-menu .sidebar-nav {
+        overflow: unset;
+    }
+
+    .menu-close .sidebar-menu .sidebar-nav li {
+        padding-left: 0.5rem;
+    }
+
+    .menu-close .sidebar-menu .sidebar-nav .nav-link svg {
+        margin-right: unset;
+    }
+
+    .menu-close .sidebar-menu .sidebar-nav .nav-link {
+        justify-content: center;
+        position: relative;
+    }
+
+    .menu-close .sidebar-menu .sidebar-nav .nav-link span {
+        display: none;
+    }
+
+    .menu-close .sidebar-menu .sidebar-nav .nav-link:hover span {
+        display: block;
+        top: 0.938rem;
+        position: absolute;
+        inset-inline-start: 70px;
+        background: rgb(var(--sidemenu-bg), 0.9);
+        color: #fff;
+        padding: 0.25rem 0.5rem;
+        border-radius: 2px;
+
+        box-shadow: 0px 3px 1px -2px rgba(var(--black-color), 0.2), 0px 2px 2px 0px rgba(var(--black-color), 0.14), 0px 1px 5px 0px rgba(var(--black-color), 0.12);
+    }
+
+    .menu-close .main-panel {
+        margin-inline-start: 5rem;
+    }
+
+    .menu-close .navbar .navbar-menu-wrapper {
+        padding-left: 6rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-close .default-footer {
+        padding-inline-start: 5rem;
+    }
+}
+
+
+.sidebar-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 1.5rem;
+    overflow: hidden auto;
+    height: calc(100vh - 150px);
+}
+
+.sidebar-nav li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding: 0 0.5rem 0 0.938rem;
+}
+
+.sidebar-nav .nav-item {
+    margin-bottom: 0.313rem;
+}
+
+.sidebar-nav .nav-link {
+    border-left: 0.188rem solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: rgb(var(--sidebar-text-color));
+    transition: 0.3;
+    padding: 0.875rem;
+}
+
+.sidebar-nav .nav-link i {
+    font-size: 1.125rem;
+    margin-right: 0.625rem;
+    /* color: #4B49AC; */
+}
+
+.sidebar-nav .nav-link svg {
+    font-size: 1.125rem;
+    margin-right: 0.625rem;
+    /* color: #4B49AC; */
+    fill: rgb(var(--sidebar-text-color));
+}
+
+.sidebar-nav .nav-link:is(.active, :hover) {
+    background-color: rgb(var(--white-color), 0.1);
+    border-left: 0.188rem solid rgb(var(--primary-color));
+    color: rgb(var(--white-color));
+    fill: rgb(var(--white-color));
+    transition: all 0.3s linear;
+}
+
+.sidebar-nav .nav-link:is(.active, :hover) svg {
+    fill: rgb(var(--white-color));
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    width: 0.313rem;
+    height: 0.5rem;
+    background-color: rgba(var(--fx-black), 0.1);
+    /* or add it to the track */
+}
+
+/* Add a thumb */
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: rgba(var(--gray-color1), 0.2);
+    border-radius: 1.563rem;
+    margin-left: 1.438rem;
+}

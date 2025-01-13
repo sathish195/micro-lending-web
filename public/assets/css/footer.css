@@ -1,0 +1,23 @@
+.footer {
+    background: rgb(var(--white-color));
+    padding: 1.875rem 0.5rem 2.45rem 0.5rem;
+
+    transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    font-size: calc(0.875rem - 0.05rem);
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    border-top: 1px solid rgba(var(--black-color), 0.06);
+}
+
+.default-footer {
+    padding-inline-start: 15rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .default-footer {
+        padding-inline-start: 2.45rem;
+    }
+}
